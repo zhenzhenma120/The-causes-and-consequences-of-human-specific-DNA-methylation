@@ -76,20 +76,15 @@ Sample names are then generated as shown followed by a second column with filena
 
 ## Quick Start
 
-### 1. Validate Setup
 
-```bash
-./00_setup_script.sh
-```
-
-### 2. Configure Analysis
+### Configure Analysis
 
 Edit `06_RUN_ANALYSIS.R`:
 - Set paths to metadata 
 - Set paths to BED files if doing regional analysis
 - Adjust input parameters (below)
 
-### 3. Run Analysis
+### Run Analysis
 
 ```bash
 Rscript 06_RUN_ANALYSIS.R <celltype>
