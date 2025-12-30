@@ -141,7 +141,7 @@ cistrans_results_<CELLTYPE>/
 | classification | Regulatory category |
 | n_cpgs | Number of CpGs in region |
 | support_fraction | Fraction of CpGs supporting classification |
-| confidence_level | high/medium/low confidence |
+| confidence_level | high/medium/low confidence based on support fraction |
 
 ## Citations
 Hao Wu, Chi Wang, Zhijin Wu (2013):,
