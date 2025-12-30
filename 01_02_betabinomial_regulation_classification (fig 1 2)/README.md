@@ -74,9 +74,6 @@ Sample names are then generated as shown followed by a second column with filena
 | `06_RUN_ANALYSIS.R` | Cell type-specific analysis script |
 | `07_submit_all_celltypes.sh` | analysis for the current paper |
 
-## Quick Start
-
-
 ### Configure Analysis
 
 Edit `06_RUN_ANALYSIS.R`:
