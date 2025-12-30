@@ -137,7 +137,7 @@ cistrans_results_<CELLTYPE>/
 |--------|-------------|
 | region_id, region_name | Region identifiers |
 | chr, start, end | Genomic coordinates |
-| meets_requirements | Whether region passed filtering |
+| meets_requirements | Whether region passed min_coverage_per_sample, min_cpgs_per_region, and min_total_coverage filtering |
 | classification | Regulatory category |
 | n_cpgs | Number of CpGs in region |
 | support_fraction | Fraction of CpGs supporting classification |
