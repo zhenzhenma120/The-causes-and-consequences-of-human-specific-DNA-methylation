@@ -14,7 +14,7 @@ This pipeline analyzes methylation differences between parental and hybrid allel
 
 ### Input Data Format
 
-**Methylation files (DSS input format, tab-separated; can also load BSSeq object if already created) for individual CpG site classification:**
+**Methylation files (DSS input format, can be created from bismark.cov.gz files, tab-separated; can also load BSSeq object if already created) for individual CpG site classification:**
 ```
 chr    pos    N    X
 1      1000   50   25
