@@ -141,6 +141,10 @@ cistrans_results_<CELLTYPE>/
 | confidence_level | high/medium/low confidence based on support fraction |
 
 ## Citations
+Hallgrímsdóttir, I. B., Carilli, M. & Pachter, L. (2024):, 
+               Estimating cis and trans contributions to differences in gene regulation., 
+                Preprint at https://doi.org/10.1101/2024.07.13.603403 .
+
 Hao Wu, Chi Wang, Zhijin Wu (2013):,
                A new shrinkage estimator for dispersion improves differential expression detection in RNA-seq data., 
                 Biostatistics, 14(2):232-43. doi:10.1093/biostatistics/kxs033
