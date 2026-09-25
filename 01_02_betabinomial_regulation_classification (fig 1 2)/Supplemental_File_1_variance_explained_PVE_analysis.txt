@@ -1,6 +1,3 @@
-Supplemental File 9. Variance partitioning of human–chimpanzee methylation divergence and regulatory site counts
-Tables are tab-separated. See Supplemental_File_9.xlsx (README sheet) for definitions and methods.
-
 ### Table A. PVE summary (1-kb bins, >=20 pooled reads per bin in every sample)
 Main result: 1-kb bins, ≥20 pooled reads per bin in every sample. For DA, HEP, IPSC and SKM the true value lies between the two corrections shown.
 Cell type	Assay	Parental replicates per species	1-kb bins tested	Method	PVE cis	PVE cis 95% CI	PVE trans	PVE trans 95% CI	Covariance term	Covariance term 95% CI	Overdispersion factor φ
