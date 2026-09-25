@@ -1,0 +1,112 @@
+Supplemental File 9. Variance partitioning of human–chimpanzee methylation divergence and regulatory site counts
+Tables are tab-separated. See Supplemental_File_9.xlsx (README sheet) for definitions and methods.
+
+### Table A. PVE summary (1-kb bins, >=20 pooled reads per bin in every sample)
+Main result: 1-kb bins, ≥20 pooled reads per bin in every sample. For DA, HEP, IPSC and SKM the true value lies between the two corrections shown.
+Cell type	Assay	Parental replicates per species	1-kb bins tested	Method	PVE cis	PVE cis 95% CI	PVE trans	PVE trans 95% CI	Covariance term	Covariance term 95% CI	Overdispersion factor φ
+CNCC	WGBS	2	2025021	Replicate-based (noise-corrected)	0.933	0.915 to 0.950	0.711	0.696 to 0.727	-0.643	-0.676 to -0.616	2.09
+DA	WGBS	1	1502979	Binomial noise correction	0.576	0.565 to 0.588	0.480	0.467 to 0.492	-0.056	-0.073 to -0.038	1.60
+DA	WGBS	1	1502979	Overdispersion-calibrated correction	0.748	0.729 to 0.769	0.325	0.311 to 0.338	-0.073	-0.095 to -0.049	1.60
+HEP	RRBS	1	40094	Binomial noise correction	0.655	0.621 to 0.686	0.396	0.369 to 0.423	-0.050	-0.086 to -0.016	2.23
+HEP	RRBS	1	40094	Overdispersion-calibrated correction	0.783	0.738 to 0.821	0.278	0.245 to 0.312	-0.060	-0.103 to -0.019	2.23
+IPSC	RRBS	1	45331	Binomial noise correction	0.709	0.680 to 0.738	0.303	0.284 to 0.325	-0.012	-0.052 to 0.021	2.71
+IPSC	RRBS	1	45331	Overdispersion-calibrated correction	0.984	0.945 to 1.033	0.033	-0.002 to 0.067	-0.017	-0.071 to 0.030	2.71
+SKM	RRBS	1	43253	Binomial noise correction	0.667	0.638 to 0.697	0.380	0.356 to 0.405	-0.047	-0.084 to -0.013	2.10
+SKM	RRBS	1	43253	Overdispersion-calibrated correction	0.843	0.803 to 0.886	0.217	0.182 to 0.252	-0.059	-0.107 to -0.017	2.10
+
+Ranges for single-replicate cell types (lower–upper across the two corrections)
+Cell type	PVE cis lower	PVE cis upper	PVE trans lower	PVE trans upper	Cov. term lower	Cov. term upper	Cis > trans under both corrections?
+DA	0.576	0.748	0.325	0.480	-0.073	-0.056	Yes
+HEP	0.655	0.783	0.278	0.396	-0.060	-0.050	Yes
+IPSC	0.709	0.984	0.033	0.303	-0.017	-0.012	Yes
+SKM	0.667	0.843	0.217	0.380	-0.059	-0.047	Yes
+
+### Table B. All variance-partitioning results
+Cell type	Assay	Unit	Min. reads per unit per sample	Analysis	Design	Method	Units tested	Bootstrap blocks	Median CpGs per bin	PVE cis	PVE cis 95% CI	PVE trans	PVE trans 95% CI	Covariance term	Covariance term 95% CI	Overdispersion factor φ	Var(P)
+CNCC	WGBS	1-kb bin	20	Primary	Two parental replicates per species	Replicate-based (noise-corrected)	2025021	2890	11	0.933	0.915 to 0.950	0.711	0.696 to 0.727	-0.643	-0.676 to -0.616	2.09	0.0036
+CNCC	WGBS	1-kb bin	20	Primary	Two parental replicates per species	Uncorrected (naive)	2025021	2890	11	0.802	0.792 to 0.812	1.084	1.073 to 1.095	-0.886	-0.905 to -0.868	2.09	0.0061
+CNCC	WGBS	1-kb bin	20	Validation: CNCC analysed with parental replicate 1 only	One parental replicate per species	Binomial noise correction	2025021	2890	11	0.530	0.521 to 0.540	0.832	0.822 to 0.842	-0.362	-0.379 to -0.346	2.09	0.0063
+CNCC	WGBS	1-kb bin	20	Validation: CNCC analysed with parental replicate 1 only	One parental replicate per species	Overdispersion-calibrated correction	2025021	2890	11	1.217	1.191 to 1.245	0.614	0.594 to 0.636	-0.832	-0.873 to -0.791	2.09	0.0028
+CNCC	WGBS	1-kb bin	20	Validation: CNCC analysed with parental replicate 1 only	One parental replicate per species	Uncorrected (naive)	2025021	2890	11	0.510	0.504 to 0.517	1.051	1.043 to 1.058	-0.561	-0.573 to -0.550	2.09	0.0096
+DA	WGBS	1-kb bin	20	Primary	One parental replicate per species	Binomial noise correction	1502979	2885	11	0.576	0.565 to 0.588	0.480	0.467 to 0.492	-0.056	-0.073 to -0.038	1.60	0.0065
+DA	WGBS	1-kb bin	20	Primary	One parental replicate per species	Overdispersion-calibrated correction	1502979	2885	11	0.748	0.729 to 0.769	0.325	0.311 to 0.338	-0.073	-0.095 to -0.049	1.60	0.0050
+DA	WGBS	1-kb bin	20	Primary	One parental replicate per species	Uncorrected (naive)	1502979	2885	11	0.625	0.616 to 0.635	0.832	0.816 to 0.845	-0.457	-0.476 to -0.436	1.60	0.0090
+HEP	RRBS	1-kb bin	20	Primary	One parental replicate per species	Binomial noise correction	40094	2698	13	0.655	0.621 to 0.686	0.396	0.369 to 0.423	-0.050	-0.086 to -0.016	2.23	0.0134
+HEP	RRBS	1-kb bin	20	Primary	One parental replicate per species	Overdispersion-calibrated correction	40094	2698	13	0.783	0.738 to 0.821	0.278	0.245 to 0.312	-0.060	-0.103 to -0.019	2.23	0.0112
+HEP	RRBS	1-kb bin	20	Primary	One parental replicate per species	Uncorrected (naive)	40094	2698	13	0.692	0.662 to 0.718	0.580	0.553 to 0.609	-0.272	-0.306 to -0.237	2.23	0.0152
+IPSC	RRBS	1-kb bin	20	Primary	One parental replicate per species	Binomial noise correction	45331	2698	12	0.709	0.680 to 0.738	0.303	0.284 to 0.325	-0.012	-0.052 to 0.021	2.71	0.0126
+IPSC	RRBS	1-kb bin	20	Primary	One parental replicate per species	Overdispersion-calibrated correction	45331	2698	12	0.984	0.945 to 1.033	0.033	-0.002 to 0.067	-0.017	-0.071 to 0.030	2.71	0.0091
+IPSC	RRBS	1-kb bin	20	Primary	One parental replicate per species	Uncorrected (naive)	45331	2698	12	0.751	0.727 to 0.778	0.543	0.520 to 0.569	-0.294	-0.332 to -0.265	2.71	0.0147
+SKM	RRBS	1-kb bin	20	Primary	One parental replicate per species	Binomial noise correction	43253	2707	11	0.667	0.638 to 0.697	0.380	0.356 to 0.405	-0.047	-0.084 to -0.013	2.10	0.0129
+SKM	RRBS	1-kb bin	20	Primary	One parental replicate per species	Overdispersion-calibrated correction	43253	2707	11	0.843	0.803 to 0.886	0.217	0.182 to 0.252	-0.059	-0.107 to -0.017	2.10	0.0102
+SKM	RRBS	1-kb bin	20	Primary	One parental replicate per species	Uncorrected (naive)	43253	2707	11	0.718	0.693 to 0.743	0.636	0.610 to 0.663	-0.354	-0.390 to -0.319	2.10	0.0154
+CNCC	WGBS	1-kb bin	50	Primary	Two parental replicates per species	Replicate-based (noise-corrected)	1298473	2886	15	0.927	0.908 to 0.946	0.660	0.642 to 0.682	-0.587	-0.625 to -0.553	2.25	0.0028
+CNCC	WGBS	1-kb bin	50	Primary	Two parental replicates per species	Uncorrected (naive)	1298473	2886	15	0.810	0.799 to 0.822	1.002	0.988 to 1.017	-0.812	-0.837 to -0.788	2.25	0.0043
+CNCC	WGBS	1-kb bin	50	Validation: CNCC analysed with parental replicate 1 only	One parental replicate per species	Binomial noise correction	1298473	2886	15	0.552	0.542 to 0.563	0.796	0.784 to 0.810	-0.348	-0.370 to -0.327	2.25	0.0047
+CNCC	WGBS	1-kb bin	50	Validation: CNCC analysed with parental replicate 1 only	One parental replicate per species	Overdispersion-calibrated correction	1298473	2886	15	1.107	1.082 to 1.132	0.591	0.568 to 0.617	-0.697	-0.744 to -0.654	2.25	0.0023
+CNCC	WGBS	1-kb bin	50	Validation: CNCC analysed with parental replicate 1 only	One parental replicate per species	Uncorrected (naive)	1298473	2886	15	0.539	0.532 to 0.547	1.000	0.990 to 1.010	-0.539	-0.555 to -0.524	2.25	0.0065
+DA	WGBS	1-kb bin	50	Primary	One parental replicate per species	Binomial noise correction	570165	2874	19	0.560	0.548 to 0.574	0.507	0.493 to 0.523	-0.067	-0.088 to -0.049	1.90	0.0058
+DA	WGBS	1-kb bin	50	Primary	One parental replicate per species	Overdispersion-calibrated correction	570165	2874	19	0.702	0.685 to 0.722	0.382	0.366 to 0.398	-0.084	-0.111 to -0.061	1.90	0.0046
+DA	WGBS	1-kb bin	50	Primary	One parental replicate per species	Uncorrected (naive)	570165	2874	19	0.623	0.613 to 0.635	0.765	0.747 to 0.782	-0.388	-0.411 to -0.365	1.90	0.0071
+HEP	RRBS	1-kb bin	50	Primary	One parental replicate per species	Binomial noise correction	22785	2452	21	0.681	0.639 to 0.727	0.371	0.344 to 0.404	-0.052	-0.100 to -0.010	3.84	0.0121
+HEP	RRBS	1-kb bin	50	Primary	One parental replicate per species	Overdispersion-calibrated correction	22785	2452	21	0.828	0.776 to 0.891	0.235	0.198 to 0.275	-0.064	-0.123 to -0.012	3.84	0.0100
+HEP	RRBS	1-kb bin	50	Primary	One parental replicate per species	Uncorrected (naive)	22785	2452	21	0.732	0.692 to 0.775	0.499	0.468 to 0.537	-0.231	-0.282 to -0.185	3.84	0.0129
+IPSC	RRBS	1-kb bin	50	Primary	One parental replicate per species	Binomial noise correction	25468	2447	19	0.753	0.712 to 0.793	0.272	0.242 to 0.299	-0.025	-0.082 to 0.022	4.42	0.0124
+IPSC	RRBS	1-kb bin	50	Primary	One parental replicate per species	Overdispersion-calibrated correction	25468	2447	19	0.986	0.932 to 1.044	0.046	0.007 to 0.086	-0.032	-0.106 to 0.029	4.42	0.0095
+IPSC	RRBS	1-kb bin	50	Primary	One parental replicate per species	Uncorrected (naive)	25468	2447	19	0.817	0.781 to 0.854	0.431	0.400 to 0.465	-0.248	-0.301 to -0.199	4.42	0.0133
+SKM	RRBS	1-kb bin	50	Primary	One parental replicate per species	Binomial noise correction	25173	2489	18	0.689	0.647 to 0.733	0.367	0.339 to 0.407	-0.057	-0.112 to -0.008	3.14	0.0122
+SKM	RRBS	1-kb bin	50	Primary	One parental replicate per species	Overdispersion-calibrated correction	25173	2489	18	0.845	0.791 to 0.901	0.224	0.186 to 0.271	-0.069	-0.137 to -0.010	3.14	0.0100
+SKM	RRBS	1-kb bin	50	Primary	One parental replicate per species	Uncorrected (naive)	25173	2489	18	0.755	0.714 to 0.796	0.538	0.504 to 0.580	-0.293	-0.345 to -0.244	3.14	0.0133
+CNCC	WGBS	Single CpG	5	Primary	Two parental replicates per species	Replicate-based (noise-corrected)	15405579	2888		0.956	0.945 to 0.966	0.741	0.728 to 0.751	-0.696	-0.715 to -0.674	1.78	0.0115
+CNCC	WGBS	Single CpG	5	Primary	Two parental replicates per species	Uncorrected (naive)	15405579	2888		0.814	0.809 to 0.820	1.221	1.212 to 1.226	-1.035	-1.045 to -1.023	1.78	0.0235
+CNCC	WGBS	Single CpG	5	Validation: CNCC analysed with parental replicate 1 only	One parental replicate per species	Binomial noise correction	15405579	2888		0.504	0.499 to 0.511	0.863	0.855 to 0.869	-0.367	-0.377 to -0.356	1.78	0.0217
+CNCC	WGBS	Single CpG	5	Validation: CNCC analysed with parental replicate 1 only	One parental replicate per species	Overdispersion-calibrated correction	15405579	2888		1.489	1.463 to 1.512	0.595	0.575 to 0.611	-1.083	-1.116 to -1.045	1.78	0.0074
+CNCC	WGBS	Single CpG	5	Validation: CNCC analysed with parental replicate 1 only	One parental replicate per species	Uncorrected (naive)	15405579	2888		0.476	0.472 to 0.479	1.129	1.124 to 1.132	-0.604	-0.610 to -0.597	1.78	0.0402
+DA	WGBS	Single CpG	5	Primary	One parental replicate per species	Binomial noise correction	3987476	2887		0.627	0.620 to 0.634	0.436	0.430 to 0.443	-0.063	-0.073 to -0.054	1.49	0.0198
+DA	WGBS	Single CpG	5	Primary	One parental replicate per species	Overdispersion-calibrated correction	3987476	2887		1.032	1.015 to 1.050	0.072	0.062 to 0.082	-0.104	-0.120 to -0.088	1.49	0.0120
+DA	WGBS	Single CpG	5	Primary	One parental replicate per species	Uncorrected (naive)	3987476	2887		0.620	0.616 to 0.624	0.960	0.952 to 0.966	-0.580	-0.588 to -0.570	1.49	0.0357
+HEP	RRBS	Single CpG	5	Primary	One parental replicate per species	Binomial noise correction	307356	2739		0.762	0.712 to 0.807	0.320	0.290 to 0.354	-0.082	-0.128 to -0.037	1.17	0.0111
+HEP	RRBS	Single CpG	5	Primary	One parental replicate per species	Overdispersion-calibrated correction	307356	2739		0.867	0.815 to 0.920	0.227	0.187 to 0.267	-0.094	-0.145 to -0.042	1.17	0.0098
+HEP	RRBS	Single CpG	5	Primary	One parental replicate per species	Uncorrected (naive)	307356	2739		0.640	0.613 to 0.666	0.790	0.759 to 0.823	-0.431	-0.466 to -0.394	1.17	0.0189
+IPSC	RRBS	Single CpG	5	Primary	One parental replicate per species	Binomial noise correction	347007	2746		0.819	0.782 to 0.862	0.231	0.203 to 0.259	-0.050	-0.104 to -0.001	1.22	0.0112
+IPSC	RRBS	Single CpG	5	Primary	One parental replicate per species	Overdispersion-calibrated correction	347007	2746		0.971	0.923 to 1.024	0.088	0.047 to 0.124	-0.059	-0.124 to -0.001	1.22	0.0095
+IPSC	RRBS	Single CpG	5	Primary	One parental replicate per species	Uncorrected (naive)	347007	2746		0.683	0.659 to 0.709	0.764	0.732 to 0.798	-0.447	-0.486 to -0.408	1.22	0.0194
+SKM	RRBS	Single CpG	5	Primary	One parental replicate per species	Binomial noise correction	326945	2771		0.760	0.720 to 0.797	0.314	0.282 to 0.346	-0.075	-0.125 to -0.029	1.16	0.0121
+SKM	RRBS	Single CpG	5	Primary	One parental replicate per species	Overdispersion-calibrated correction	326945	2771		0.864	0.822 to 0.910	0.221	0.180 to 0.260	-0.085	-0.142 to -0.033	1.16	0.0107
+SKM	RRBS	Single CpG	5	Primary	One parental replicate per species	Uncorrected (naive)	326945	2771		0.675	0.654 to 0.696	0.853	0.821 to 0.885	-0.528	-0.565 to -0.496	1.16	0.0214
+CNCC	WGBS	Single CpG	10	Primary	Two parental replicates per species	Replicate-based (noise-corrected)	326440	2805		0.994	0.963 to 1.029	0.646	0.613 to 0.680	-0.641	-0.701 to -0.586	1.87	0.0106
+CNCC	WGBS	Single CpG	10	Primary	Two parental replicates per species	Uncorrected (naive)	326440	2805		0.920	0.899 to 0.941	1.042	1.013 to 1.073	-0.962	-1.005 to -0.919	1.87	0.0163
+CNCC	WGBS	Single CpG	10	Validation: CNCC analysed with parental replicate 1 only	One parental replicate per species	Binomial noise correction	326440	2805		0.658	0.637 to 0.680	0.773	0.748 to 0.799	-0.430	-0.469 to -0.393	1.87	0.0161
+CNCC	WGBS	Single CpG	10	Validation: CNCC analysed with parental replicate 1 only	One parental replicate per species	Overdispersion-calibrated correction	326440	2805		1.167	1.120 to 1.210	0.597	0.557 to 0.639	-0.764	-0.839 to -0.689	1.87	0.0091
+CNCC	WGBS	Single CpG	10	Validation: CNCC analysed with parental replicate 1 only	One parental replicate per species	Uncorrected (naive)	326440	2805		0.623	0.609 to 0.638	1.033	1.013 to 1.054	-0.656	-0.683 to -0.628	1.87	0.0241
+DA	WGBS	Single CpG	10	Primary	One parental replicate per species	Binomial noise correction	7576	1154		0.770	0.697 to 0.844	0.237	0.183 to 0.310	-0.007	-0.094 to 0.080	1.46	0.0138
+DA	WGBS	Single CpG	10	Primary	One parental replicate per species	Overdispersion-calibrated correction	7576	1154		0.912	0.835 to 1.021	0.096	0.007 to 0.177	-0.008	-0.111 to 0.095	1.46	0.0117
+DA	WGBS	Single CpG	10	Primary	One parental replicate per species	Uncorrected (naive)	7576	1154		0.733	0.678 to 0.783	0.584	0.512 to 0.683	-0.317	-0.407 to -0.241	1.46	0.0184
+HEP	RRBS	Single CpG	10	Primary	One parental replicate per species	Binomial noise correction	38420	1944		0.798	0.696 to 0.911	0.381	0.283 to 0.514	-0.179	-0.373 to -0.032	1.16	0.0056
+HEP	RRBS	Single CpG	10	Primary	One parental replicate per species	Overdispersion-calibrated correction	38420	1944		0.876	0.764 to 1.007	0.320	0.214 to 0.472	-0.197	-0.413 to -0.035	1.16	0.0051
+HEP	RRBS	Single CpG	10	Primary	One parental replicate per species	Uncorrected (naive)	38420	1944		0.667	0.598 to 0.741	0.765	0.675 to 0.877	-0.433	-0.569 to -0.323	1.16	0.0089
+IPSC	RRBS	Single CpG	10	Primary	One parental replicate per species	Binomial noise correction	48826	1949		0.882	0.786 to 0.989	0.237	0.183 to 0.306	-0.119	-0.264 to -0.002	1.31	0.0065
+IPSC	RRBS	Single CpG	10	Primary	One parental replicate per species	Overdispersion-calibrated correction	48826	1949		1.053	0.938 to 1.194	0.089	0.019 to 0.173	-0.142	-0.313 to -0.002	1.31	0.0055
+IPSC	RRBS	Single CpG	10	Primary	One parental replicate per species	Uncorrected (naive)	48826	1949		0.777	0.715 to 0.846	0.691	0.617 to 0.773	-0.469	-0.572 to -0.379	1.31	0.0099
+SKM	RRBS	Single CpG	10	Primary	One parental replicate per species	Binomial noise correction	58531	2157		0.747	0.670 to 0.823	0.356	0.299 to 0.422	-0.103	-0.190 to -0.017	1.21	0.0085
+SKM	RRBS	Single CpG	10	Primary	One parental replicate per species	Overdispersion-calibrated correction	58531	2157		0.824	0.737 to 0.913	0.290	0.226 to 0.359	-0.114	-0.211 to -0.019	1.21	0.0077
+SKM	RRBS	Single CpG	10	Primary	One parental replicate per species	Uncorrected (naive)	58531	2157		0.715	0.660 to 0.767	0.749	0.688 to 0.815	-0.464	-0.540 to -0.385	1.21	0.0122
+
+### Table C. CpG site counts by regulatory category
+CpG sites tested = sites covered in all parental and hybrid samples of a cell type. Percentages of divergent sites. TOTAL rows sum across cell types; mean rows average cell-type percentages.
+Classification	Cell type	Assay	CpG sites tested	Conserved	Divergent	pure_cis	pure_trans	cis_plus_trans	cis_x_trans	Other divergent [label to confirm]	Divergent (% of tested)	pure_cis (% of divergent)	pure_trans (% of divergent)	cis_plus_trans (% of divergent)	cis_x_trans (% of divergent)	other (% of divergent)
+FDR < 0.05	CNCC	WGBS	19610993	18821431	789562	522145	139176	0	0	128241	4.0	66.1	17.6	0.0	0.0	16.2
+FDR < 0.05	DA	WGBS	4342330	4217391	124939	123803	572	0	0	564	2.9	99.1	0.5	0.0	0.0	0.5
+FDR < 0.05	HEP	RRBS	308195	302447	5748	5527	105	0	0	116	1.9	96.2	1.8	0.0	0.0	2.0
+FDR < 0.05	IPSC	RRBS	347827	341340	6487	6325	56	0	0	106	1.9	97.5	0.9	0.0	0.0	1.6
+FDR < 0.05	SKM	RRBS	326556	320719	5837	5568	108	0	0	161	1.8	95.4	1.9	0.0	0.0	2.8
+FDR < 0.05	TOTAL		24935901	24003328	932573	663368	140017	0	0	129188	3.7	71.1	15.0	0.0	0.0	13.9
+FDR < 0.05	Mean across cell types										2.5	90.9	4.5	0.0	0.0	4.6
+
+Nominal	CNCC	WGBS	19610993	16336817	3274176	1495379	968135	32554	778108	0	16.7	45.7	29.6	1.0	23.8	0.0
+Nominal	DA	WGBS	4342330	3788395	553935	342754	139807	3436	67938	0	12.8	61.9	25.2	0.6	12.3	0.0
+Nominal	HEP	RRBS	308195	286570	21625	14194	4895	317	2219	0	7.0	65.6	22.6	1.5	10.3	0.0
+Nominal	IPSC	RRBS	347827	322464	25363	17302	5216	248	2597	0	7.3	68.2	20.6	1.0	10.2	0.0
+Nominal	SKM	RRBS	326556	300350	26206	16785	6261	232	2928	0	8.0	64.1	23.9	0.9	11.2	0.0
+Nominal	TOTAL		24935901	21034596	3901305	1886414	1124314	36787	853790	0	15.6	48.4	28.8	0.9	21.9	0.0
+Nominal	Mean across cell types										10.4	61.1	24.4	1.0	13.5	0.0
